@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mygp/home/pages/custom_searchdeligate.dart';
 import 'package:mygp/list_of_functionality/everything_at_glance.dart';
 import 'package:mygp/offerCards/lists_img_offers.dart';
 import 'package:mygp/offerCards/offer_cards.dart';
@@ -39,7 +40,14 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   width: 20,
                 ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.search))
+                IconButton(
+                    onPressed: () {
+                      showSearch(
+                        context: context,
+                        delegate: CustomSearchdeligate(),
+                      );
+                    },
+                    icon: const Icon(Icons.search))
               ],
             ),
             backgroundColor: Colors.white,
